@@ -28,9 +28,10 @@
     <?php
     // Controle de estoque
 
-    $produto = "Ultrabook";
-    $qtdEmEstoque = 12; //o que temos no momento
+    $produto = "Luva";
+    $qtdEmEstoque = 1; //o que temos no momento
     $qtdCritica = 2; //mínimo necessário
+    $ano = "";
     ?>
 
     <h3>Produto: <?=$produto?></h3>
@@ -39,15 +40,59 @@
     <?php
     /* Se a quatidade em estoque for abaixo da quantidde crítica, o sistema deve avisar e pedir pra repor. */
 if($qtdEmEstoque < $qtdCritica){
-    echo "<p class=\"alert alert-danger\">É necessário repor</p>";
+    echo "<p class=\"alert alert-warning\">É necessário repor</p>";
+
+    /* Condicional ANINHADA */
+    if($qtdEmEstoque == 0){
+        echo "<p class=\"alert alert-danger\">É necessário repor AGORA!!!!</p>";
+    }
 
 }else{
     /* Caso contrário, simplesmente falar que o estoque está normal */
     echo "<p class=\"alert alert-success\">Estoque normal</p>";
-}
-
-    
+} 
     ?>
+
+    <h2>Encadeada (usa <code>if, else, elseif</code>)</h2>
+
+    <?php
+    /* Verificando o produto e atribuindo diferentes garantias (em anos) */
+
+    if($produto == "Ultrabook"){
+        $garantia = 5;
+    } elseif($produto == "Geladeira"){
+        $garantia = 3;
+    } elseif($produto == "TV"){
+        $garantia = 2;
+    }
+     else {
+        $garantia = 1;
+    }
+
+    if($garantia == 1){
+        $ano = "ano";
+    } else {
+        $ano = "anos";
+    }
+    ?>
+
+    <p>O produto <?=$produto?> tem garantia de <span class="badge text-bg-primary"><?=$garantia?></span><?=$ano?>.</p>
+
+
+    <h2>Condicinal com <code>switch/case</code></h2>
+    <p><i>Estrutura alternativa para condicional encadeada</i></p>
+
+    <?php
+    switch($produto){
+        case "Ultrabook" : $garantiaB = 5; break;
+        case "Geladeira" : $garantiaB = 3; break;
+        case "TV" : $garantiaB = 2; break;
+        default: $garantiaB = 1; break;
+    };
+    ?>
+
+    <p>Garantia B: <?=$garantiaB?></p>
+
 
 </div>
 
