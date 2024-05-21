@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
             li:nth-child(odd) {
+                border: solid;
                 background-color: gray;
+            }
+
+            li:nth-child(even) {
+                border: solid;
             }
     </style>
     <title>Exercicio 3</title>
