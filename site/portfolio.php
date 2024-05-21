@@ -1,4 +1,6 @@
-<?php include "cabecalho.php"; ?>
+<?php
+$title = "Portifolio - Site";
+ include "cabecalho.php"; ?>
             <h2>Nossos trabalhos</h2>
             <details>
                 <summary>Game</summary>
