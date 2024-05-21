@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+            li:nth-child(odd) {
+                background-color: gray;
+            }
+    </style>
     <title>Exercicio 3</title>
 </head>
 <body>
@@ -12,14 +17,15 @@
     $meses = [
         "janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
     ];
-
-    foreach($meses as $mes){ ?>
+    ?>
     <ol>
+    <?php
+    foreach($meses as $mes){ ?>
         <li><?=$mes?></li>
         
-    </ol>
-    <?php
+        <?php
     }
     ?>
+    </ol>
 </body>
 </html>
