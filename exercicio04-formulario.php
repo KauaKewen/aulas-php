@@ -3,12 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            text-align: center;
+        }
+
+        form {
+            margin-top: 20vh;
+            padding: 5vh 0vh;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50%;
+            margin-left: 25%;
+            border-radius: 8px;
+            
+        }
+    </style>
     <title>Exercício 04 (formulário)</title>
 </head>
 <body>
     <h1>Exercício 04 (formulário)</h1>
     <hr>
-    <form autocomplete="off" action="" method="">
+    <form autocomplete="off" action="exercicio04-processamento.php" method="post">
         <p>
             <label for="produto">Produto:</label>
             <input required type="text" name="produto" id="produto">
@@ -26,7 +45,7 @@
                     $fabricantes = ["Dell", "Assus", "Apple", "Vaio"];
 
                     foreach($fabricantes as $fabricante){ ?> 
-                        <option value=""><?=$fabricante?></option>
+                        <option><?=$fabricante?></option>
 
                     <?php }
                 ?>
