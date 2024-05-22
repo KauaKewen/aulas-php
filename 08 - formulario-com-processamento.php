@@ -1,4 +1,5 @@
-!DOCTYPE html><html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -20,6 +21,7 @@ if( isset($_POST['enviar'])){
     <hr>
 <?php    
 } else {
+    /* O formulário abaixo será exibido enquanto o botão enviar não for acionado. Quando for, o formulário será removido da página  */
 ?>
     <!-- Mantenha o action vazio! -->
     <form action="" method="post"> <label for="nome">Nome:</label> <input type="text" name="nome" id="nome"> <button type="submit" name="enviar">Enviar</button> </form>
