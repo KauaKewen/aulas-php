@@ -6,6 +6,7 @@
     <style>
         body {
             text-align: center;
+            background-color: gray;
         }
 
         form {
@@ -19,7 +20,18 @@
             width: 50%;
             margin-left: 25%;
             border-radius: 8px;
-            
+        }
+        button {
+            border: none;
+            height: 35px;
+            width: 150px;
+            background-color: black;
+            color: white;
+            border: solid white;
+            border-radius: 10px;
+        }
+        label {
+            padding: 5px;
         }
     </style>
     <title>Exercício 04 (formulário)</title>
